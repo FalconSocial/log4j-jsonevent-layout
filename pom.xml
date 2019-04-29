@@ -3,7 +3,7 @@
   <groupId>net.logstash.log4j</groupId>
   <artifactId>jsonevent-layout</artifactId>
   <packaging>jar</packaging>
-  <version>1.8-SNAPSHOT</version>
+  <version>1.8-jboss5</version>
   <name>jsonevent-layout</name>
   <description>Log4j pattern layout that conforms to the logstash json_event format</description>
   <url>http://logstash.net</url>
@@ -66,8 +66,8 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>2.3.2</version>
           <configuration>
-            <source>1.5</source>
-            <target>1.5</target>
+            <source>1.8</source>
+            <target>1.8</target>
           </configuration>
         </plugin>
         <plugin>
@@ -106,7 +106,7 @@
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>1.2.16</version>
+      <version>1.2.14</version>
       <scope>provided</scope>
     </dependency>
     <dependency>

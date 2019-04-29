@@ -9,6 +9,7 @@ import org.apache.log4j.spi.LocationInfo;
 import org.apache.log4j.spi.LoggingEvent;
 import org.apache.log4j.spi.ThrowableInformation;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TimeZone;
@@ -58,10 +59,9 @@ public class JSONEventLayoutV0 extends Layout {
 
     public String format(LoggingEvent loggingEvent) {
         threadName = loggingEvent.getThreadName();
-        timestamp = loggingEvent.getTimeStamp();
+        timestamp = new Date().getTime();
         fieldData = new HashMap<String, Object>();
         exceptionInformation = new HashMap<String, Object>();
-        mdc = loggingEvent.getProperties();
         ndc = loggingEvent.getNDC();
 
         logstashEvent = new JSONObject();

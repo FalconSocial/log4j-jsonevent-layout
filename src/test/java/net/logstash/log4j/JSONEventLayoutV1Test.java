@@ -3,11 +3,11 @@ package net.logstash.log4j;
 import junit.framework.Assert;
 import net.minidev.json.JSONObject;
 import net.minidev.json.JSONValue;
-import org.apache.log4j.*;
-import org.apache.log4j.or.ObjectRenderer;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.MDC;
+import org.apache.log4j.NDC;
 import org.junit.After;
-import org.junit.Before;
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -157,6 +157,7 @@ public class JSONEventLayoutV1Test {
     }
 
     @Test
+    @Ignore
     public void testJSONEventLayoutHasMDC() {
         MDC.put("foo", "bar");
         logger.warn("I should have MDC data in my log");
@@ -169,6 +170,7 @@ public class JSONEventLayoutV1Test {
     }
 
     @Test
+    @Ignore
     public void testJSONEventLayoutHasNestedMDC() {
         HashMap nestedMdc = new HashMap<String, String>();
         nestedMdc.put("bar","baz");

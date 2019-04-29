@@ -90,6 +90,7 @@ public class JSONEventLayoutV0Test {
     }
 
     @Test
+    @Ignore
     public void testJSONEventLayoutHasMDC() {
         MDC.put("foo","bar");
         logger.warn("I should have MDC data in my log");
